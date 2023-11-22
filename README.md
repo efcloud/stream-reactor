@@ -3,6 +3,20 @@
 
 Join us on slack [![Alt text](images/slack.jpeg)](https://launchpass.com/lensesio)
 
+# About this fork
+
+This fork modifies the original build config to make the fat jars compatible with latest confluent cp-kafka-connect image.
+
+The original build config uses slf4j 2.x that conflicts with confluent cp-kafka-connect who is using slf4j 1.x.
+
+## How to build
+
+```bash
+export VERSION=5.0.1.1
+sbt 'set test in assembly := {}' -java-home /Library/Java/JavaVirtualMachines/temurin-17.0.9/Contents/Home/  clean compile assembly
+mv */target/libs/*.jar ./target/
+```
+
 # Lenses for Apache Kafka
 
 Lenses offers SQL (for data browsing and Kafka Streams), Kafka Connect connector management, cluster monitoring and more.

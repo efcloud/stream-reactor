@@ -18,11 +18,13 @@ object Dependencies {
     "commons-logging"          % "commons-logging",
     "log4j"                    % "log4j",
     "org.slf4j"                % "slf4j-log4j12",
+    "org.slf4j"                % "log4j-over-slf4j",
     "org.apache.logging.log4j" % "log4j",
     //"org.apache.logging.log4j" % "log4j-api",
     "org.apache.logging.log4j" % "log4j-core",
     "org.apache.logging.log4j" % "log4j-slf4j-impl",
     "com.sun.jersey"           % "*",
+    "ch.qos.logback"           % "logback-classic",
   )
 
   // scala versions
@@ -70,7 +72,7 @@ object Dependencies {
     val kindProjectorVersion    = "0.13.2"
     val betterMonadicForVersion = "0.3.1"
 
-    val logbackVersion      = "1.4.6"
+    val logbackVersion      = "1.2.12"
     val scalaLoggingVersion = "3.9.5"
     val classGraphVersions  = "4.8.157"
 
@@ -194,9 +196,9 @@ object Dependencies {
   val logback          = "ch.qos.logback"              % "logback-classic"  % logbackVersion
   lazy val logbackCore = "ch.qos.logback"              % "logback-core"     % logbackVersion
   val scalaLogging     = "com.typesafe.scala-logging" %% "scala-logging"    % scalaLoggingVersion
-  val log4jToSlf4j     = "org.slf4j"                   % "log4j-over-slf4j" % "2.0.6"
-  val jclToSlf4j       = "org.slf4j"                   % "jcl-over-slf4j"   % "2.0.6"
-  val slf4jApi         = "org.slf4j"                   % "slf4j-api"        % "2.0.6"
+  val log4jToSlf4j     = "org.slf4j"                   % "log4j-over-slf4j" % "1.7.32"
+  val jclToSlf4j       = "org.slf4j"                   % "jcl-over-slf4j"   % "1.7.32"
+  val slf4jApi         = "org.slf4j"                   % "slf4j-api"        % "1.7.32"
 
   // testing
   val scalatest = "org.scalatest" %% "scalatest" % scalatestVersion
